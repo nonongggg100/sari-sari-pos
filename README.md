@@ -73,6 +73,7 @@ vercel.json               # Vercel routing + function config
    | `SESSION_SECRET` | yes | Any long random string — signs the session cookie |
    | `POSTGRES_URL` | yes | Postgres connection string |
    | `ADMIN_SIGNUP_CODE` | no | Secret code required to self-register as Admin via `/register`. Leave blank to disable admin self-registration (Cashier registration still works; admins are then created from the Admin ▸ Users page) |
+   | `ADMIN_PASSWORD` | no | Password for the `admin` account. When set, the app updates (or creates) `admin` with this password on startup, so the real password lives only in your environment variables |
 
    To point `POSTGRES_URL` at a Vercel Postgres database before it's deployed, create the database in the Vercel dashboard first (see [Deployment](#deployment-to-vercel) below), then run:
 
